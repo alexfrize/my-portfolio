@@ -1,10 +1,15 @@
 <section class="portfolio">
-  <h2>Landing Pages</h2>
-  <div class="portfolio-block">
-    <div *ngFor="let item of items" class="item">
-      <img [src]="imgPath + item.url" />
-      <div class="overlay">
-        <p class="description">{{ item.description }}</p>
+  <div *ngFor="let block of portfolio">
+    <h2>{{ block.blockName }}</h2>
+    <div class="portfolio-block">
+      <div *ngFor="let item of block.items" class="item">
+        <img [src]="imgPath + item.url" />
+        <div class="overlay">
+          <p class="description">
+            {{ item.description }}
+            <button class="action-button">{{ item.action }}</button>
+          </p>
+        </div>
       </div>
     </div>
   </div>
