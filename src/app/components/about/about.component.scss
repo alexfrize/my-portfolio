@@ -1,0 +1,31 @@
+@import '../../../assets/scss/headers';
+
+.about {
+  .about-main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .photo-container {
+      padding: 0 60px;
+
+      .photo {
+        width: 250px;
+      }
+    }
+    .text-container {
+      padding: 0 60px;
+      box-sizing: border-box;
+
+      .list {
+        padding: 0;
+        padding-left: 16px;
+
+        .list-item {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}

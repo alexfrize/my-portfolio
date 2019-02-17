@@ -1,0 +1,8 @@
+<section class="top-menu">
+  <div *ngFor="let menuItem of menuItems; let i = index" class="menu-item">
+    <a [routerLink]="menuItem.url" class="link" routerLinkActive="link--active">
+      {{ menuItem.text }}
+    </a>
+    <div class="underline"></div>
+  </div>
+</section>

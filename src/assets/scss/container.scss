@@ -1,0 +1,10 @@
+@import './breakpoints';
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+
+  @include breakpoint(lg) {
+    width: 1140px;
+  }
+}

@@ -1,0 +1,11 @@
+<section class="portfolio">
+  <h2>Landing Pages</h2>
+  <div class="portfolio-block">
+    <div *ngFor="let item of items" class="item">
+      <img [src]="imgPath + item.url" />
+      <div class="overlay">
+        <p class="description">{{ item.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

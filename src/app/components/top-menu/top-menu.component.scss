@@ -1,0 +1,61 @@
+@import '../../../assets/scss/colors';
+
+$menuTransition: all 0.15s ease-in;
+.top-menu {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  .menu-item {
+    padding: 20px 30px;
+
+    .underline {
+      transition: $menuTransition;
+      margin: 5px auto;
+      height: 2px;
+      width: 0;
+      background: transparent;
+    }
+
+    .link {
+      transition: $menuTransition;
+      text-decoration: none;
+      color: black;
+      padding-bottom: 5px;
+
+      // &:hover,
+      &--active {
+        color: $blue;
+      }
+    }
+
+    .link:hover ~ .underline {
+      background: $blue;
+      animation: showUnderline 0.5s ease-in forwards;
+
+      @keyframes showUnderline {
+        0% {
+          width: 0;
+        }
+        40% {
+          width: 90%;
+        }
+        60% {
+          width: 60%;
+        }
+        80% {
+          width: 80%;
+        }
+        100% {
+          width: 92%;
+        }
+      }
+    }
+
+    .link--active ~ .underline {
+      background: $blue;
+      width: 92%;
+    }
+  }
+}
