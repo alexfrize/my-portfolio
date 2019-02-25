@@ -7,7 +7,12 @@
         <div class="overlay">
           <p class="description">
             {{ item.description }}
-            <button class="action-button">{{ item.action }}</button>
+            <button
+              class="action-button"
+              (click)="doAction(item.action, item.linkData)"
+            >
+              {{ item.action }}
+            </button>
           </p>
         </div>
       </div>

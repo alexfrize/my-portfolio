@@ -1,0 +1,18 @@
+.popup-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: flex-end;
+  .close-button {
+    height: 24px;
+    transition: 0.5s;
+    color: black;
+    position: relative;
+    top: -10px;
+    right: -10px;
+    &:hover {
+      cursor: pointer;
+      color: gray;
+    }
+  }
+}
