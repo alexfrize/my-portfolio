@@ -2,12 +2,5 @@
   <i class="material-icons close-button" (click)="closeModal()">close</i>
 </div>
 <div mat-dialog-content>
-  <iframe
-    width="760"
-    height="430"
-    [src]="sanitizer.bypassSecurityTrustResourceUrl(videoLink)"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
+  <div id="player"></div>
 </div>

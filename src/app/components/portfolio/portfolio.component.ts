@@ -88,6 +88,7 @@ export class PortfolioComponent implements OnInit {
     console.log(action, linkData);
     switch (action) {
       case VISIT_WEBSITE:
+        window.open(linkData);
         break;
 
       case WATCH_DEMO:
