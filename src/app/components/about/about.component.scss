@@ -67,6 +67,34 @@
           padding-bottom: 5px;
         }
       }
+
+      .download-button-container {
+        display: none;
+
+        @include breakpoint(sm) {
+          display: block;
+        }
+
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+
+        .download-button {
+          cursor: pointer;
+          margin: 0 auto;
+          background: transparent;
+          padding: 5px 10px;
+          display: block;
+          transition: 0.5s;
+          border: 2px solid darkgrey;
+          font-size: 16px;
+
+          &:hover {
+            color: $blue;
+            border: 2px solid $blue;
+          }
+        }
+      }
     }
   }
 }
