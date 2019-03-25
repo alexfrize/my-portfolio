@@ -1,15 +1,36 @@
 @import '../../../assets/scss/headers';
 @import '../../../assets/scss/colors';
+@import '../../../assets/scss/breakpoints';
+
+$imageWidth: 350px;
+$imageHeight: 200px;
 
 .portfolio {
   .portfolio-block {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
 
     .item {
-      width: 350px;
-      height: 200px;
+      display: block;
+      margin: auto;
+      width: 100%;
+      max-width: $imageWidth;
+
+      img {
+        width: 100%;
+      }
+
+      @include breakpoint(xs) {
+        width: $imageWidth;
+        height: $imageHeight;
+      }
+
       position: relative;
       transition: all 0.3s ease-in-out;
       transform: scale(0.95);

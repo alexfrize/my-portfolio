@@ -1,21 +1,62 @@
 @import '../../../assets/scss/headers';
+@import '../../../assets/scss/breakpoints';
 
 .about {
   .about-main {
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
+    flex-direction: column;
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+    }
 
     .photo-container {
-      padding: 0 60px;
+      width: 100%;
+
+      @include breakpoint(sm) {
+        padding: 0 60px;
+        width: unset;
+      }
 
       .photo {
-        width: 250px;
+        display: block;
+        margin: auto;
+        width: 150px;
+
+        @include breakpoint(xs) {
+          width: 200px;
+        }
+
+        @include breakpoint(sm) {
+          width: 250px;
+        }
       }
     }
     .text-container {
-      padding: 0 60px;
+      h1,
+      h2 {
+        text-align: center;
+      }
       box-sizing: border-box;
+      margin-top: 10px;
+
+      @include breakpoint(xs) {
+        padding: 0 60px;
+      }
+
+      @include breakpoint(sm) {
+        margin-top: 0;
+        padding: 0 10px;
+        h1,
+        h2 {
+          text-align: left;
+        }
+      }
+
+      @include breakpoint(lg) {
+        padding: 0 60px;
+      }
 
       .list {
         padding: 0;

@@ -85,7 +85,6 @@ export class PortfolioComponent implements OnInit {
   ngOnInit() {}
 
   doAction(action: string, linkData: string) {
-    console.log(action, linkData);
     switch (action) {
       case VISIT_WEBSITE:
         window.open(linkData);

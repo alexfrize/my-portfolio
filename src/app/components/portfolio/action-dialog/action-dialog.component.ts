@@ -26,7 +26,7 @@ export class ActionDialogComponent implements OnInit, AfterViewInit {
   createPlayer(videoId) {
     const ww = <any>window.innerWidth;
     const maxVideoWidth = 1090;
-    const w = ww - 200 > maxVideoWidth ? maxVideoWidth : ww - 200;
+    const w = ww - 200 > maxVideoWidth ? maxVideoWidth : ww - ww / 5;
     const h = Math.round((w / 16) * 9);
     this.player = new (<any>window).YT.Player('player', {
       height: h,
