@@ -17,6 +17,17 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { BottomLinksComponent } from './components/bottom-links/bottom-links.component';
 import { ActionDialogComponent } from './components/portfolio/action-dialog/action-dialog.component';
 
+import {
+  HammerGestureConfig,
+  HAMMER_GESTURE_CONFIG
+} from '@angular/platform-browser';
+
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any>{
+    swipe: { velocity: 0.4, threshold: 10 }
+  };
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +48,14 @@ import { ActionDialogComponent } from './components/portfolio/action-dialog/acti
     MatDialogModule
   ],
   providers: [
-    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
+    {
+      provide: MAT_DIALOG_DEFAULT_OPTIONS,
+      useValue: { hasBackdrop: true }
+    },
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
   ],
   bootstrap: [AppComponent]
 })
