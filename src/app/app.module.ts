@@ -24,7 +24,9 @@ import {
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = <any>{
-    swipe: { velocity: 0.4, threshold: 10 }
+    swipe: { velocity: 0.1, threshold: 0 },
+    pinch: { enable: false },
+    rotate: { enable: false }
   };
 }
 
