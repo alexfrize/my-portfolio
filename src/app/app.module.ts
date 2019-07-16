@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatDialogModule,
@@ -22,8 +22,9 @@ import {
   HAMMER_GESTURE_CONFIG
 } from '@angular/platform-browser';
 
+@Injectable()
 export class MyHammerConfig extends HammerGestureConfig {
-  overrides = <any>{
+  overrides: any = {
     swipe: { velocity: 0.1, threshold: 0 },
     pinch: { enable: false },
     rotate: { enable: false }
